@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schema Markup Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero-copy-wrap">
+        <p class="eyebrow">Schema Markup Generator</p>
+        <h1>Google-ready JSON-LD schema builder</h1>
+        <p class="hero-copy">Build SEO-friendly Schema.org markup for rich results with an easy form interface. Add FAQ items, breadcrumbs, product offers, recipe steps, and more.</p>
+      </div>
+      <div class="hero-actions">
+        <button id="copyButton" class="primary-btn">Copy JSON-LD</button>
+      </div>
+    </header>
+
+    <main class="grid-layout">
+      <section class="panel panel-left">
+        <div class="panel-header">
+          <h2>Select a schema type</h2>
+          <p>Pick a schema type and fill the fields to generate ready-to-use JSON-LD.</p>
+        </div>
+
+        <div class="control-row">
+          <label class="field-label" for="schemaType">Schema Type</label>
+          <select id="schemaType" class="input-field"></select>
+        </div>
+
+        <div id="schemaInfo" class="schema-info"></div>
+
+        <div id="fieldContainer"></div>
+
+        <div class="button-row">
+          <button id="generateButton" class="secondary-btn">Generate Schema</button>
+          <button id="resetButton" class="tertiary-btn">Reset Fields</button>
+        </div>
+      </section>
+
+      <section class="panel panel-right">
+        <div class="panel-header">
+          <h2>Generated JSON-LD</h2>
+          <p>Copy, preview, and paste this schema into your HTML.</p>
+        </div>
+
+        <div class="output-panel">
+          <pre id="outputArea" class="output-area" aria-live="polite"></pre>
+        </div>
+
+        <div class="panel-footer">
+          <label class="inline-label">
+            <input type="checkbox" id="showScriptTag" checked /> Include &lt;script&gt; wrapper
+          </label>
+          <a id="testLink" class="link-button" href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Test with Google</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
